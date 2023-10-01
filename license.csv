@@ -1,0 +1,37 @@
+ 
+Html
+
+<div class="list-group">
+   <div class="list-group-item list-header" data-name="spoiler-title">
+  
+   </div>
+   <div class="list-group-item list-content spoiler-body">
+     
+   </div>
+
+   <div class="list-group-item list-header" data-name="spoiler-title">
+   
+   </div>
+   <div class="list-group-item list-content spoiler-body">
+     
+   </div>
+
+   <div class="list-group-item list-header" data-name="spoiler-title">
+     
+   </div>
+   <div class="list-group-item list-content spoiler-body">
+    
+   </div>
+ </div>
+
+JS
+
+const headers = document.querySelectorAll("[data-name='spoiler-title']");
+
+headers.forEach(function (item) {
+  item.addEventListener("click", headerClick);
+});
+
+function headerClick() {
+  this.nextElementSibling.classList.toggle("spoiler-body");
+}
